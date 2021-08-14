@@ -1,0 +1,20 @@
+.main-menu {
+  font-family: 'Roboto', sans-serif;
+
+  nav {
+    background-color: #d71920 !important;
+    ul {
+      li {
+        a {
+          font-size: 14px;
+        }
+      }
+      .dot-menu {
+        bottom: 3px;
+        font-size: 5px;
+        letter-spacing: 1px;
+        margin-left: 35px;
+      }
+    }
+  }
+}
