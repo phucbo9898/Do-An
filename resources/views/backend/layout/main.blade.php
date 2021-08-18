@@ -338,9 +338,15 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li>
-                    <a href="">
+                    <a href="{{route('admin.category.index')}}">
                         <i class="fa fa-th"></i>
                         <span>Quản lý danh mục</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('admin.brand.index')}}">
+                        <i class="fa fa-th"></i>
+                        <span>Quản lý thương hiệu</span>
                     </a>
                 </li>
                 <li>

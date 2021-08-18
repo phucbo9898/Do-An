@@ -38,7 +38,7 @@ Route::get('/chi-tiet-tin-tuc', 'ShopController@detailArticle');
 
 //------------------ Quản trị --------------------------------------------
 // Gom nhóm các route
-Route::group(['prefix' => 'admin'], function (){
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function (){
     // Trang chủ - quản trị
     Route::get('/', 'AdminController@index');
 
@@ -46,9 +46,10 @@ Route::group(['prefix' => 'admin'], function (){
     Route::resource('banner', 'BannerController');
     Route::resource('user', 'UserController');
     Route::resource('product', 'ProductController');
-//    Route::get('/category', 'CategoryController@index');
+    //Route::get('/category', 'CategoryController@index');
     Route::resource('category','CategoryController');
     Route::resource('article','ArticleController');
+    Route::resource('brand','BrandController');
 });
 
 
