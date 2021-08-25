@@ -26,7 +26,7 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="{{ route('admin.brand.update', ['id'=>$data->id]) }}">
+                <form role="form" method="post" action="{{ route('admin.brand.update', ['id' => $data->id]) }}">
                     @csrf
                     @method('PUT')
                     <div class="box-body">

@@ -44,7 +44,6 @@ class BrandController extends Controller
         $model = new Brand();   // model brand sử dụng cơ chế ORM => tự động mapping với table brands
         $model->name = $params['name'];
         $model->slug = str_slug($params['name']);// khi sử dụng str_slug thì đồng hồ -> dong-ho
-
         $model->website = $params['website'];
         $model->position = $params['position'];
         $model->is_active = isset($params['is_active']) ? $params['is_active'] : 0;
@@ -89,15 +88,17 @@ class BrandController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $params = $request->all();  // $_POST, $_GET
-        $model = Brand::find($id);// Lấy toàn bộ tham số gửi từ form
+        $params = $request->all();
 
+        $model = Brand::find($id);
         $model->name = $params['name'];
         $model->slug = str_slug($params['name']);// khi sử dụng str_slug thì đồng hồ -> dong-ho
         $model->website = $params['website'];
         $model->position = $params['position'];
         $model->is_active = isset($params['is_active']) ? $params['is_active'] : 0;
-        $model->save(); // chạy câu lệnh insert trong SQL: INSERT INTO MyGuests (firstname, lastname, email) VALUE('John','Doe','john@example.com')
+        $model->save();
+        // Chuyển hướng đến trang
+        return redirect()->route('admin.brand.index');
     }
 
     /**
