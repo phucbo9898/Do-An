@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Quản lý danh mục
+            Quản lý danh mục <a href="{{ route('admin.category.create') }}" class="btn btn-success">Tạo</a>
 
         </h1>
         <ol class="breadcrumb">
@@ -41,25 +41,34 @@
                                 <th>ID</th>
                                 <th>Tên</th>
                                 <th>Logo</th>
-                                <th>Website</th>
+                                <th>Danh mục cha</th>
                                 <th>Vị trí</th>
                                 <th>Trạng thái</th>
                                 <th>Ngày tạo</th>
                                 <th>Hành động</th>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>samsung</td>
-                                <td>abcd</td>
-                                <td>samsung.com</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary">Sửa</button>
-                                    <button type="button" class="btn btn-danger">Xóa</button>
-                                </td>
-                            </tr>
+                            @foreach($data as $key => $row)
+                                <tr>
+                                    <td>{{ $key + 1 }}</td>
+                                    <td>{{ $row->name }}</td>
+                                    <td>
+                                        <img width="80" src="{{ asset($row->image) }}" alt="">
+                                    </td>
+                                    <td>{{ $row->parent_id }}</td>
+                                    <td>{{ $row->position }}</td>
+                                    <td>{{ $row->is_active }}</td>
+                                    <td>{{ $row->created_at }}</td>
+                                    <td>
+                                        <a href="{{ route('admin.category.edit' , ['id' => $row->id ]) }}" class="btn btn-primary">Sửa</a>
+                                        <form action="{{ route('admin.category.destroy', ['id' => $row->id ]) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Xóa</button>
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            @endforeach
                         </table>
                     </div>
                     <!-- /.box-body -->

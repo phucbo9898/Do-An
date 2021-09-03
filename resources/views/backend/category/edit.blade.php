@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Cập Nhật Thương Hiệu <a href="{{ route('admin.brand.index') }}" class="btn btn-success">Danh Sách</a>
+            Cập Nhật Danh Mục <a href="{{ route('admin.category.index') }}" class="btn btn-success">Danh Sách</a>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -25,13 +25,13 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form enctype="multipart/form-data" role="form" method="post" action="{{ route('admin.brand.update', ['id' => $data->id]) }}">
+                    <form enctype="multipart/form-data" role="form" method="post" action="{{ route('admin.category.update', ['id' => $data->id]) }}">
                         @csrf
                         @method('PUT')
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tên</label>
-                                <input value="{{ $data->name }}" name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập Tên Thương hiệu">
+                                <label for="exampleInputEmail1">Tên danh mục</label>
+                                <input value="{{ $data->name }}" name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập Tên">
                             </div>
 
                             <div class="form-group">
@@ -41,8 +41,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Website công ty</label>
-                                <input value="{{ $data->website }}" name="website" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên website">
+                                <label for="exampleInputEmail1">Danh mục cha</label>
+                                <select class="form-control" name="parent_id">
+                                    @foreach($list as $item)
+                                        <option {{$item->id == $data->parent_id ? 'selected' : ''}} value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
 
                             <div class="form-group">

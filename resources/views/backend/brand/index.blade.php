@@ -4,9 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Quản lý thương hiệu <a href="{{ route('admin.brand.create') }}" class="btn btn-success">Tạo</a>
-
-
+            Quản Lý Thương Hiệu <a href="{{ route('admin.brand.create') }}" class="btn btn-success">Tạo</a>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -17,13 +15,11 @@
 
     <!-- Main content -->
     <section class="content">
-
-        <!-- /.row -->
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Danh sách</h3>
+                        <h3 class="box-title">Danh Sách</h3>
 
                         <div class="box-tools">
                             <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
@@ -48,18 +44,25 @@
                                 <th>Ngày tạo</th>
                                 <th>Hành động</th>
                             </tr>
-                            @foreach($data as $key=> $row)
+                            @foreach($data as $key => $row)
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $row->name }}</td>
-                                    <td>ảnh</td>
+                                    <td>
+                                        <img width="80" src="{{ asset($row->image) }}" alt="">
+                                    </td>
                                     <td>{{ $row->website }}</td>
                                     <td>{{ $row->position }}</td>
                                     <td>{{ $row->is_active }}</td>
                                     <td>{{ $row->created_at }}</td>
                                     <td>
                                         <a href="{{ route('admin.brand.edit' , ['id' => $row->id ]) }}" class="btn btn-primary">Sửa</a>
-                                        <button type="button" class="btn btn-danger">Xóa</button>
+                                        <form action="{{ route('admin.brand.destroy', ['id' => $row->id ]) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Xóa</button>
+                                        </form>
+
                                     </td>
                                 </tr>
                             @endforeach
