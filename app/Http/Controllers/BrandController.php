@@ -87,7 +87,7 @@ class BrandController extends Controller
     public function edit($id)
     {
         //Lấy chi tiết
-        $data = Brand::find($id); // SELECT * FROM brands WHERE id  = 5
+        $data = Brand::findOrFail($id); // SELECT * FROM brands WHERE id  = 5
 
         return view('backend.brand.edit', ['data' =>$data]);
 
@@ -104,7 +104,7 @@ class BrandController extends Controller
     {
         $params = $request->all();
 
-        $model = Brand::find($id);
+        $model = Brand::findOrFail($id);
         $model->name = $params['name'];
         $model->slug = str_slug($params['name']);// khi sử dụng str_slug thì đồng hồ -> dong-ho
         $model->website = $params['website'];

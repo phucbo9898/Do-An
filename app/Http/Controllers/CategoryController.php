@@ -88,7 +88,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //Lấy chi tiết
-        $data = Category::find($id); // SELECT * FROM category WHERE id  = 5
+        $data = Category::findOrFail($id); // SELECT * FROM category WHERE id  = 5
         $list= Category::all(); // Lấy toàn bộ danh mục => build option danh mục cha
         return view('backend.category.edit', ['data' =>$data, 'list'=>$list]);
     }
@@ -104,7 +104,7 @@ class CategoryController extends Controller
     {
         $params = $request->all();
 
-        $model = Category::find($id);   // Lấy ra đối tượng cần sử
+        $model = Category::findOrFail($id);   // Lấy ra đối tượng cần sử
         $model->name = $params['name'];
         $model->slug = str_slug($params['name']);// khi sử dụng str_slug thì đồng hồ -> dong-ho
         $model->parent_id = $params['parent_id'];

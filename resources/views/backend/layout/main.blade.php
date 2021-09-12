@@ -260,14 +260,14 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- User Account: style can be found in dropdown.less -->
+                    <!-- user Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/backend/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <span class="hidden-xs">Alexander Pierce</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <!-- User image -->
+                            <!-- user image -->
                             <li class="user-header">
                                 <img src="/backend/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
@@ -338,57 +338,48 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li>
-                    <a href="{{route('admin.category.index')}}">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý danh mục</span>
+                    <a href="{{ route('admin.category.index') }}">
+                        <i class="fa fa-th"></i> <span>Quản lý Danh Mục</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('admin.brand.index')}}">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý thương hiệu</span>
+                    <a href="{{ route('admin.brand.index') }}">
+                        <i class="fa fa-th"></i> <span>Quản lý Thương Hiệu</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý sản phẩm</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý tin tức</span>
+                    <a href="{{ route('admin.product.index') }}">
+                        <i class="fa fa-th"></i> <span>Quản lý Sản Phẩm</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý thư viện</span>
+                        <i class="fa fa-th"></i> <span>Quản lý Tin Tức</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý đặt hàng</span>
+                        <i class="fa fa-th"></i> <span>Quản lý Thư Viện</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý người dùng</span>
+                        <i class="fa fa-th"></i> <span>Quản lý Đặt Hàng</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý liên hệ</span>
+                        <i class="fa fa-th"></i> <span>Quản lý Người Dùng</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-th"></i>
-                        <span>Quản lý cấu hình Website</span>
+                        <i class="fa fa-th"></i> <span>Quản lý Liên Hệ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-th"></i> <span>Quản lý Cấu Hình Website</span>
                     </a>
                 </li>
             </ul>
@@ -398,7 +389,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- nội dung của cac trang web -->
+        <!-- Nội dung của các trang  -->
         @yield('main-content')
     </div>
     <!-- /.content-wrapper -->
@@ -610,11 +601,17 @@
 <script src="/backend/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="/backend/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
+
 <!-- FastClick -->
 <script src="/backend/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="/backend/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backend/dist/js/demo.js"></script>
+
+@yield('my_js')
+
 </body>
 </html>
