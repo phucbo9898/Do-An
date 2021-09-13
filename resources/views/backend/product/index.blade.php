@@ -68,7 +68,8 @@
                     </div>
                     <!-- /.box-body -->
                     <!-- /.box-body -->
-                    <div class="box-footer clearfix">   // Tạo phân trang
+{{--                    Tạo phân trang --}}
+                    <div class="box-footer clearfix">
                         {{ $data->links() }}
                     </div>
                 </div>
