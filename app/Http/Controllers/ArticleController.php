@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -13,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('backend.article.index');
+        $data= Article::all();
+        return view('backend.article.index', ['data'=>$data]);
     }
 
     /**
@@ -23,7 +25,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('backend/article/create');
+        $data= Article::all();
+        return view('backend.article.create', ['data'=> $data ]);
     }
 
     /**
@@ -34,7 +37,44 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // lấy toàn bộ tham số gửi từ form
+        $params = $request->all(); // $_POST , $_GET
+
+        $article = new Article(); // khởi tạo model
+        $article->title = $params['title']; // $_POST['title'];
+        $article->slug = str_slug($request->input('name'));
+
+        // Upload file
+        if ($request->hasFile('image')) { // dòng này Kiểm tra xem có image có được chọn
+            // get file
+            $file = $request->file('image');
+            // đặt tên cho file image
+            $filename = time().'_'.$file->getClientOriginalName(); // $file->getClientOriginalName() == tên ban đầu của image
+            // Định nghĩa đường dẫn sẽ upload lên
+            $path_upload = 'uploads/article/';
+            // Thực hiện upload file
+            $file->move($path_upload,$filename); // upload lên thư mục public/uploads/article
+
+            $article->image = $path_upload.$filename;
+        }
+
+        $article->summary = $request->input('summary'); // số lượng
+        $article->description = $request->input('description'); // giá bán
+        $article->type = $request->input('type');
+        $article->position = $request->input('position');
+        $article->status = $request->input('status');
+        $article->url = $request->input('url');
+        //kiem tra is_active co ton tai khong
+        $article->is_active = isset($params['is_active']) ? $params['is_active'] : 0;
+
+        $article->user_id = $request->input('user_id');
+        $article->meta_title = $request->input('meta_title');
+        $article->meta_description = $request->input('meta_description');
+
+        $article->save();
+
+        // chuyển hướng đến trang
+        return redirect()->route('admin.article.index');
     }
 
     /**
@@ -56,7 +96,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        return view('backend.article.edit', ['article'=>$article]);
     }
 
     /**
@@ -68,7 +109,44 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // lấy toàn bộ tham số gửi từ form
+        $params = $request->all(); // $_POST , $_GET
+
+        $article = Article::findOrFail($id); // Lấy ra đối tượng cần sửa
+        $article->title = $params['title']; // $_POST['title'];
+        $article->slug = str_slug($request->input('name'));
+
+        // Upload file
+        if ($request->hasFile('image')) { // dòng này Kiểm tra xem có image có được chọn
+            // get file
+            $file = $request->file('image');
+            // đặt tên cho file image
+            $filename = time().'_'.$file->getClientOriginalName(); // $file->getClientOriginalName() == tên ban đầu của image
+            // Định nghĩa đường dẫn sẽ upload lên
+            $path_upload = 'uploads/article/';
+            // Thực hiện upload file
+            $file->move($path_upload,$filename); // upload lên thư mục public/uploads/article
+
+            $article->image = $path_upload.$filename;
+        }
+
+        $article->summary = $request->input('summary'); // số lượng
+        $article->description = $request->input('description'); // giá bán
+        $article->type = $request->input('type');
+        $article->position = $request->input('position');
+        $article->status = $request->input('status');
+        $article->url = $request->input('url');
+        //kiem tra is_active co ton tai khong
+        $article->is_active = isset($params['is_active']) ? $params['is_active'] : 0;
+
+        $article->user_id = $request->input('user_id');
+        $article->meta_title = $request->input('meta_title');
+        $article->meta_description = $request->input('meta_description');
+
+        $article->save();
+
+        // chuyển hướng đến trang
+        return redirect()->route('admin.article.index');
     }
 
     /**
@@ -79,6 +157,9 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Article::destroy($id); // DELETE FROM article WHERE id=15
+
+        // chuyển hướng đến trang
+        return redirect()->route('admin.article.index');
     }
 }

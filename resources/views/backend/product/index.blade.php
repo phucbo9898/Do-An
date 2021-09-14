@@ -4,9 +4,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Quản Lý Sản Phẩm <a href="{{ route('admin.product.create') }}" class="btn btn-success">Tạo</a>
+            Quản Lý Sản Phẩm <a href="{{route('admin.product.create')}}" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Thêm Sản Phẩm</a>
         </h1>
-
     </section>
 
     <!-- Main content -->
@@ -35,6 +34,7 @@
                                 <th>Tên</th>
                                 <th>Avatar</th>
                                 <th>Danh Mục</th>
+                                <th>Số lượng</th>
                                 <th>Vị trí</th>
                                 <th>Trạng thái</th>
                                 <th>Ngày tạo</th>
@@ -49,12 +49,13 @@
                                             <img width="80" src="{{ asset($row->image) }}" alt="">
                                         </td>
                                         <td>{{ @$row->category->name }}</td>
+                                        <td>{{ $row->stock }}</td>
                                         <td>{{ $row->position }}</td>
                                         <td>{{ $row->is_active }}</td>
                                         <td>{{ $row->created_at }}</td>
                                         <td>
-                                            <a href="{{ route('admin.product.edit' , ['id' => $row->id ]) }}" class="btn btn-primary">Sửa</a>
-
+                                            <a href="{{ route('admin.product.edit', ['id'=> $row->id]) }}" class="btn btn-info">Sửa</a>
+                                            {{--Chức năng xóa ( phải có chống bảo mật @csrf và @method('DELETE')--}}
                                             <form style="display: inline-block;" action="{{ route('admin.product.destroy', ['id' => $row->id ]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')

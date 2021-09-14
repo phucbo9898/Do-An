@@ -353,12 +353,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href=" {{ route('admin.article.index') }}">
                         <i class="fa fa-th"></i> <span>Quản lý Tin Tức</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ route('admin.banner.index') }}">
                         <i class="fa fa-th"></i> <span>Quản lý Thư Viện</span>
                     </a>
                 </li>

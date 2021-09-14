@@ -52,7 +52,7 @@
 
                             <div class="checkbox">
                                 <label>
-                                    <input {{ $data->is_active == 1 ? 'checked' : '' }} type="checkbox" name="is_active" value="1"> Hiển thị
+                                    <input {{ ($data->is_active == 1) ? 'checked' : '' }} type="checkbox" name="is_active" value="1"> Hiển thị
                                 </label>
                             </div>
                         </div>
