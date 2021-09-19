@@ -35,10 +35,18 @@ Route::get('/tin-tuc', 'ShopController@article');
 //Danh sách tin tức
 Route::get('/chi-tiet-tin-tuc', 'ShopController@detailArticle');
 
+// Đăng nhập ( ->name('admin.login') là đặt tên cho đường dẫn)
+Route::get('/admin/login', 'AdminController@login')->name('admin.login');
+
+//Xử lý login
+Route::post('/admin/postLogin', 'AdminController@postLogin')->name('admin.postLogin');
+
+// Đăng xuất
+Route::get('/admin/logout', 'AdminController@logout')->name('admin.logout');
 
 //------------------ Quản trị --------------------------------------------
 // Gom nhóm các route
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function (){
+Route::group(['prefix' => 'admin', 'as' => 'admin.','middleware'=> 'checkLogin'], function (){
     // Trang chủ - quản trị
     Route::get('/', 'AdminController@index');
 
