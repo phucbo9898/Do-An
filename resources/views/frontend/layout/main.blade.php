@@ -139,28 +139,28 @@
                                 <a class="dropdown-item" href="/frontend/#">Something else here</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="/frontend/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ĐỒNG HỒ NAM
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item " href="/frontend/#">Action</a>
-                                <a class="dropdown-item" href="/frontend/#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/frontend/#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="/frontend/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ĐỒNG HỒ NỮ
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item " href="/frontend/#">Action</a>
-                                <a class="dropdown-item" href="/frontend/#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/frontend/#">Something else here</a>
-                            </div>
-                        </li>
+{{--                        <li class="nav-item dropdown">--}}
+{{--                            <a class="nav-link dropdown-toggle text-white" href="/frontend/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                                ĐỒNG HỒ NAM--}}
+{{--                            </a>--}}
+{{--                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+{{--                                <a class="dropdown-item " href="/frontend/#">Action</a>--}}
+{{--                                <a class="dropdown-item" href="/frontend/#">Another action</a>--}}
+{{--                                <div class="dropdown-divider"></div>--}}
+{{--                                <a class="dropdown-item" href="/frontend/#">Something else here</a>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item dropdown">--}}
+{{--                            <a class="nav-link dropdown-toggle text-white" href="/frontend/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                                ĐỒNG HỒ NỮ--}}
+{{--                            </a>--}}
+{{--                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+{{--                                <a class="dropdown-item " href="/frontend/#">Action</a>--}}
+{{--                                <a class="dropdown-item" href="/frontend/#">Another action</a>--}}
+{{--                                <div class="dropdown-divider"></div>--}}
+{{--                                <a class="dropdown-item" href="/frontend/#">Something else here</a>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/frontend/#">CHÍNH SÁCH</a>
                         </li>
@@ -183,7 +183,7 @@
     <div class="container">
         <div class="row d-flex justify-content-between">
             <div class="col-12 col-sm-12 col-md-3">
-                <h5 class="font-weight-bold">ĐỒNG HỒ HẢI PHÒNG</h5>
+                <h5 class="font-weight-bold">ĐỒNG HỒ THÁI BÌNH</h5>
                 <span class="dot-footer text-white mb-3">
                  <i class="fa fa-circle"></i>
                  <i class="fa fa-circle"></i>
@@ -191,11 +191,11 @@
                 </span>
                 <ul class="list-unstyled text-small mt-2">
                     <li class="mb-2"><a class="text-white" href="/frontend/#">
-                            <i class="fa fa-map-marker mr-2 "></i> Số 123 lê lợi ngô quyên hải phòng
+                            <i class="fa fa-map-marker mr-2 "></i> Trần Hưng Đạo, TP Thái Bình
                         </a></li>
-                    <li class="mb-2"><a class="text-white" href="/frontend/#"><i class="fa fa-phone mr-2"></i> Tel : 02253.123.456</a></li>
-                    <li class="mb-2"><a class="text-white" href="/frontend/#"><i class="fa fa-envelope-o mr-2"></i> donghohaiphong@gmail.com</a></li>
-                    <li class="mb-2"><a class="text-white" href="/frontend/#"><i class="fa fa-bank mr-2"></i> www.donghohaiphong.com</a></li>
+                    <li class="mb-2"><a class="text-white" href="/frontend/#"><i class="fa fa-phone mr-2"></i> Tel : 01234.567.890</a></li>
+                    <li class="mb-2"><a class="text-white" href="/frontend/#"><i class="fa fa-envelope-o mr-2"></i> donghohthaibinh@gmail.com</a></li>
+                    <li class="mb-2"><a class="text-white" href="/frontend/#"><i class="fa fa-bank mr-2"></i> www.donghothaibinh.com</a></li>
                 </ul>
             </div>
             <div class="col-12 col-sm-12 col-md-3">
@@ -243,7 +243,7 @@
 </footer>
 <div class="container-fluid d-flex align-items-center copyright">
     <div class="container">
-        <p class="col-12 mb-0 text-white py-2 font-weight-bold">BẢN QUYỀN THUỘC VỀ CÔNG TY ĐỒNG HỒ HẢI PHÒNG</p>
+        <p class="col-12 mb-0 text-white py-2 font-weight-bold">BẢN QUYỀN THUỘC VỀ CÔNG TY ĐỒNG HỒ THÁI BÌNH</p>
     </div>
 </div>
 

@@ -42,7 +42,7 @@
                                     <td>{{ $item->title }}</td>
                                     <td>
                                     @if ($item->image) <!-- Kiểm tra hình ảnh tồn tại -->
-                                        <img src="{{asset($item->image)}}" width="150" >
+                                        <img width="80" src="{{asset($item->image)}}" width="150" >
                                         @endif
                                     </td>
                                     <td>{{ ($item->target == 1) ? '_blank' : '_self' }}</td>

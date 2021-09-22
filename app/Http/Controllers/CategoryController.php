@@ -48,16 +48,16 @@ class CategoryController extends Controller
         $model->position = $params['position'];
         $model->is_active = isset($params['is_active']) ? $params['is_active'] : 0;
 
-        // xử lý lưu ảnh
-        if ($request->hasFile('image')) { // kiểm tra xem có file gửi lên không
-            // get file được gửi lên
+        // Upload file
+        if ($request->hasFile('image')) { // dòng này Kiểm tra xem có image có được chọn
+            // get file
             $file = $request->file('image');
-            // đặt lại tên cho file
-            $filename = $file->getClientOriginalName();  // $file->getClientOriginalName() = lấy tên gốc của file
-            // duong dan upload
-            $path_upload = 'uploads/';
-            // upload file
-            $file->move($path_upload,$filename);
+            // đặt tên cho file image
+            $filename = time().'_'.$file->getClientOriginalName(); // $file->getClientOriginalName() == tên ban đầu của image
+            // Định nghĩa đường dẫn sẽ upload lên
+            $path_upload = 'uploads/category/';
+            // Thực hiện upload file
+            $file->move($path_upload,$filename); // upload lên thư mục public/uploads/product
 
             $model->image = $path_upload.$filename;
         }
@@ -111,16 +111,16 @@ class CategoryController extends Controller
         $model->position = $params['position'];
         $model->is_active = isset($params['is_active']) ? $params['is_active'] : 0;
 
-        // xử lý lưu ảnh
-        if ($request->hasFile('image')) { // kiểm tra xem có file gửi lên không
-            // get file được gửi lên
+        // Upload file
+        if ($request->hasFile('image')) { // dòng này Kiểm tra xem có image có được chọn
+            // get file
             $file = $request->file('image');
-            // đặt lại tên cho file
-            $filename = $file->getClientOriginalName();  // $file->getClientOriginalName() = lấy tên gốc của file
-            // duong dan upload
-            $path_upload = 'uploads/';
-            // upload file
-            $file->move($path_upload,$filename);
+            // đặt tên cho file image
+            $filename = time().'_'.$file->getClientOriginalName(); // $file->getClientOriginalName() == tên ban đầu của image
+            // Định nghĩa đường dẫn sẽ upload lên
+            $path_upload = 'uploads/category/';
+            // Thực hiện upload file
+            $file->move($path_upload,$filename); // upload lên thư mục public/uploads/product
 
             $model->image = $path_upload.$filename;
         }
