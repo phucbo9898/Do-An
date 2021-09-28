@@ -27,7 +27,10 @@
 Route::get('/','ShopController@index');
 Route::get('/danh-muc-san-pham', 'ShopController@category');
 Route::get('/chi-tiet-san-pham', 'ShopController@product');
-Route::get('/lien-he', 'ShopController@contact');
+Route::get('/lien-he', 'ShopController@contact')->name('shop.contact');
+
+Route::post('/gui-lien-he', 'ShopController@postContact')->name('shop.postContact');
+
 Route::get('/dat-hang', 'ShopController@order');
 
 //Danh sách tin tức
@@ -58,6 +61,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.','middleware'=> 'checkLogin']
     Route::resource('category','CategoryController');
     Route::resource('article','ArticleController');
     Route::resource('brand','BrandController');
+    Route::resource('contact','ContactController');
 });
 
 

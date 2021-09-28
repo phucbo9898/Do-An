@@ -1,203 +1,676 @@
 @extends('frontend.layout.main')
 
 @section('main-content')
-    <main role="main">
-
-        <!-- Breadcrumb-->
-        <section class="breadcrumb h-100 mb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb my-0 py-0">
-                                <li class="breadcrumb-item"><a class="text-dark" href="/frontend//">Trang chủ</a></li>
-                                <li class="breadcrumb-item"><a class="text-dark" href="/frontend/#">Đồng hồ nam</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Casio</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- BSTORE-BREADCRUMB START -->
+            <div class="bstore-breadcrumb">
+                <a href="/frontend/index.html">HOMe<span><i class="fa fa-caret-right"></i> </span> </a>
+                <span> <i class="fa fa-caret-right"> </i> </span>
+                <a href="/frontend/shop-gird.html"> women </a>
+                <span> Faded Short Sleeves T-shirt </span>
             </div>
-        </section>
-        <!-- End Breadcrumb-->
-
-        <!-- Detail Product-->
-        <section class="detail-product mb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h5 class="title-related">CHI TIẾT SẢN PHẨM</h5>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-12 col-md-5">
-                        <div class="w-100 h-auto text-center" style="border: 1px solid #eee">
-                            <img class="" src="/frontend/img/watch/w2.jpg" alt="Card image">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-7">
-                        <h4>Mercedes GLS 350 d</h4>
-                        <p>Giá bán : <span class="text-danger">3.400.000 đ</span></p>
-                        <p>Bảo hành : 12 tháng</p>
-                        <p>Tình trạng : Còn hàng</p>
-
-                        <hr>
-                        <div class="order-cart">
-                            <form class="form-inline" action="/site/AddCart?product_cart=140" method="GET">
-                                <input type="hidden" value="140" name="product_cart">
-                                <div class="form-group mr-sm-3 mb-2">
-                                    <label for="inputPassword2" class="mr-2">Số lượng</label>
-                                    <input type="number" class="form-control" name="quantity_cart" value="1" size="20">
+            <!-- BSTORE-BREADCRUMB END -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <!-- SINGLE-PRODUCT-DESCRIPTION START -->
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+                    <div class="single-product-view">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="thumbnail_1">
+                                <div class="single-product-image">
+                                    <img src="/frontend/img/product/sale/1.jpg" alt="single-product-image" />
+                                    <a class="new-mark-box" href="/frontend/#">new</a>
+                                    <a class="fancybox" href="/frontend/img/product/sale/1.jpg" data-fancybox-group="gallery"><span class="btn large-btn">View larger <i class="fa fa-search-plus"></i></span></a>
                                 </div>
-                                <button type="submit" class="btn btn-secondary mb-2 btn-order">Đặt mua</button>
-                            </form>
+                            </div>
+                            <div class="tab-pane" id="thumbnail_2">
+                                <div class="single-product-image">
+                                    <img src="/frontend/img/product/sale/3.jpg" alt="single-product-image" />
+                                    <a class="new-mark-box" href="/frontend/#">new</a>
+                                    <a class="fancybox" href="/frontend/img/product/sale/3.jpg" data-fancybox-group="gallery"><span class="btn large-btn">View larger <i class="fa fa-search-plus"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="thumbnail_3">
+                                <div class="single-product-image">
+                                    <img src="/frontend/img/product/sale/9.jpg" alt="single-product-image" />
+                                    <a class="new-mark-box" href="/frontend/#">new</a>
+                                    <a class="fancybox" href="/frontend/img/product/sale/9.jpg" data-fancybox-group="gallery"><span class="btn large-btn">View larger <i class="fa fa-search-plus"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="thumbnail_4">
+                                <div class="single-product-image">
+                                    <img src="/frontend/img/product/sale/13.jpg" alt="single-product-image" />
+                                    <a class="new-mark-box" href="/frontend/#">new</a>
+                                    <a class="fancybox" href="/frontend/img/product/sale/13.jpg" data-fancybox-group="gallery"><span class="btn large-btn">View larger <i class="fa fa-search-plus"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="thumbnail_5">
+                                <div class="single-product-image">
+                                    <img src="/frontend/img/product/sale/7.jpg" alt="single-product-image" />
+                                    <a class="new-mark-box" href="/frontend/#">new</a>
+                                    <a class="fancybox" href="/frontend/img/product/sale/7.jpg" data-fancybox-group="gallery"><span class="btn large-btn">View larger <i class="fa fa-search-plus"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="thumbnail_6">
+                                <div class="single-product-image">
+                                    <img src="/frontend/img/product/sale/12.jpg" alt="single-product-image" />
+                                    <a class="new-mark-box" href="/frontend/#">new</a>
+                                    <a class="fancybox" href="/frontend/img/product/sale/12.jpg" data-fancybox-group="gallery"><span class="btn large-btn">View larger <i class="fa fa-search-plus"></i></span></a>
+                                </div>
+                            </div>
                         </div>
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                            Gọi đặt mua : 1900.8090
-                        </small>
-
+                    </div>
+                    <div class="select-product">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs select-product-tab bxslider">
+                            <li class="active">
+                                <a href="/frontend/#thumbnail_1" data-toggle="tab"><img src="/frontend/img/product/sidebar_product/1.jpg" alt="pro-thumbnail" /></a>
+                            </li>
+                            <li>
+                                <a href="/frontend/#thumbnail_2" data-toggle="tab"><img src="/frontend/img/product/sidebar_product/2.jpg" alt="pro-thumbnail" /></a>
+                            </li>
+                            <li>
+                                <a href="/frontend/#thumbnail_3" data-toggle="tab"><img src="/frontend/img/product/sidebar_product/3.jpg" alt="pro-thumbnail" /></a>
+                            </li>
+                            <li>
+                                <a href="/frontend/#thumbnail_4" data-toggle="tab"><img src="/frontend/img/product/sidebar_product/4.jpg" alt="pro-thumbnail" /></a>
+                            </li>
+                            <li>
+                                <a href="/frontend/#thumbnail_5" data-toggle="tab"><img src="/frontend/img/product/sidebar_product/5.jpg" alt="pro-thumbnail" /></a>
+                            </li>
+                            <li>
+                                <a href="/frontend/#thumbnail_6" data-toggle="tab"><img src="/frontend/img/product/sidebar_product/6.jpg" alt="pro-thumbnail" /></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">CHI TIẾT SẢN PHẨM</a>
-                                <a class="nav-item nav-link " id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">CHÍNH SÁCH BẢO HÀNG</a>
+                <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
+                    <div class="single-product-descirption">
+                        <h2>Faded Short Sleeves T-shirt</h2>
+                        <div class="single-product-social-share">
+                            <ul>
+                                <li><a href="/frontend/#" class="twi-link"><i class="fa fa-twitter"></i>Tweet</a></li>
+                                <li><a href="/frontend/#" class="fb-link"><i class="fa fa-facebook"></i>Share</a></li>
+                                <li><a href="/frontend/#" class="g-plus-link"><i class="fa fa-google-plus"></i>Google+</a></li>
+                                <li><a href="/frontend/#" class="pin-link"><i class="fa fa-pinterest"></i>Pinterest</a></li>
+                            </ul>
+                        </div>
+                        <div class="single-product-review-box">
+                            <div class="rating-box">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-empty"></i>
                             </div>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                <br>
-                                <p>Khác với người Pháp bị ám ảnh bởi đồng hồ siêu mỏng, người Thụy Sĩ chuyên làm đồng hồ đẹp như trang sức, từ lâu, một chiếc đồng hồ Đức cứng cáp và thực dụng luôn được xem là biểu tượng của đàn ông đích thực. </p>
-                                <p></p><p style="text-align:justify">Một trong những chuyện thành công nhất mọi thời đại là khi người nói nhắc đến "đồng hồ" - người nghe nghĩ ngay đến "Thụy Sĩ". Song, chuyện không phải lúc nào cũng như vậy. Đây là lý do tại sao lần tới mua đồng hồ, bạn nên cân nhắc chọn một chiếc đồng hồ Đức, thay vì mua <a href="/frontend/http://dangquangwatch.vn/"><strong>đồng hồ Thụy Sĩ</strong></a>.</p>
-
-                                <p style="text-align:center"><img alt="đồng hồ bruno BS-17-13043-221" src="/frontend/img/watch/w1.jpg" ></p>
-
-                                <p style="text-align:justify"><br>
-                                    <br>
-                                    50 năm trước, nghề làm đồng hồ phổ biến khắp châu Âu. Chẳng ai lấy làm lạ khi người Đức, vốn nổi tiếng với sự chính xác, đúng giờ và chủ nghĩa hoàn hảo, cũng tham gia vào ngành công nghiệp đồng hồ. Người Đức bắt đầu làm đồng hồ từ thế kỷ 15</p>
-
-                                Ít nhất, chất tiện dụng và cứng cáp là đặc điểm mà mọi người dùng có thể cảm nhận được khi sử dụng đồng hồ Đức. Chất Đức cũng thể hiện ở thiết kế tinh giản, dễ nhìn - mà người ta có thể tìm thấy ở đồng hồ Đức thuộc nhiều phân khúc giá khác nhau.</p>
-
-                                <p style="text-align:justify">Một trong số đó là<strong> <a href="/frontend/http://dangquangwatch.vn/sp/Bruno-Sohnle-Glashutte/560-0-0-0-0-0-0.html">đồng hồ Bruno Sohnle Glashutte</a></strong> đạt tiêu chuẩn cao nhất với <a href="/frontend/http://dangquangwatch.vn/article/234/Dang-Quang-Watch---dia-chi-tin-cay-mua-dong-ho-chinh-hang.html">chứng nhận Glashutte/SA</a> là chứng nhận cao nhất cho ngành đồng hồ trên thế giới.</p>
-
-                                <p style="text-align:justify">Hệ thống <strong>đồng hồ chính hãng</strong> <strong>Đăng Quang Watch</strong> nhận thấy đẳng cấp của thương hiệu Bruno Sohnle Glashutte rất phù hợp với tầng lớp doanh nhân, chính khách thành đạt ở Việt Nam. Cho nên, Đăng Quang Watch đã thương thuyết thành công để làm nhà phân phối độc quyền cho Bruno Sohnle Glashutte tại Việt Nam.</p>
-
-                                <p style="text-align:justify">Khách hàng hoàn toàn có thể mua hàng tại hệ thống phân phối đồng hồ Đăng Quang trên toàn quốc với mức giá rẻ hơn giá bán lẻ tại Châu Âu nên quý khách hoàn toàn yên tâm về giá và chất lượng sản phẩm tại Việt Nam.</p>
-
-                                <p style="text-align:justify">Thị trấn Glashutte nơi Bruno Sohnle đặt làm trụ sở sản xuất ra những chiếc đồng hồ tuyệt vời</p>
-
-                                <p style="text-align:center"><iframe frameborder="0" height="360" src="https://www.youtube.com/embed/P9fQLnLwfS8" width="640"></iframe></p>
-
-                                <p style="text-align:justify">&nbsp;</p>
-
-                                <p style="text-align:justify"><br>
-                                    &nbsp;</p>
-                                <p></p>
+                            <div class="read-reviews">
+                                <a href="/frontend/#">Read reviews (1)</a>
                             </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <p><span style="font-size: small;">Trong thời gian sử dụng nếu gặp bất kỳ trục trặc nào Khách hàng có thể liên hệ trực tiếp với Trung tâm bảo hành của Hãng hoặc phòng CSKH của Công ty Cổ phần Trực tuyến Đăng Quang để được trợ giúp theo số điện thoại: 04.3622.8508 – 0986.68.1189<br></span></p>
-                                <p><span style="font-size: small;"><span style="font-family: Arial;"><span style="font-family: Arial;">Chúng tôi cam kết bảo hành một cách trung thực nhất đảm bảo quyền lợi cho Quý khách, xin Quý khách vui lòng đọc kỹ các quy định bảo hành ghi ở mặt sau phiếu trước khi thực hiện bảo hành sản phẩm.</span></span></span><span style="font-family: Arial;"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></span>
-                                </p><p class="MsoNormal"><span style="font-size: small;"><span style="font-family: Arial;"><b>Thời gian nhận và trả bảo hành:</b></span></span><b><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></b></p>
-                                <p class="MsoNormal"><span style="font-size: small;"><span style="font-family: Arial;">Từ 8h30 đến 21h30 các ngày trong tuần.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal"><span style="font-size: small;"><span style="font-family: Arial;"><b>Trường hợp được bảo hành:</b></span></span><b><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></b></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Sản phẩm trong thời hạn còn bảo hành;</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Lỗi về máy, pin và độ chịu nước;</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Sản phẩm được bảo hành theo quy định của nhà cung cấp;</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Quý khách xuất trình phiếu bảo hành khi đi bảo hành.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal"><span style="font-size: small;"><span style="font-family: Arial;"><b>Trường hợp không được bảo hành:</b></span></span><b><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></b></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Những sản phẩm không thể xác định được nguồn gốc mua tại Công ty Cổ phần Trực tuyến Đăng Quang, thì Công ty Cổ phần Trực tuyến Đăng Quang có quyền từ chối bảo hành.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Sản phẩm đã quá thời hạn ghi trên Phiếu bảo hành hoặc mất Phiếu bảo hành.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Phiếu bảo hành, Tem Đăng Quang bị rách, không còn Tem Đăng Quang hoặc dán đè hoặc bị sửa đổi.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Phiếu bảo hành không ghi rõ Mã số đồng hồ và ngày mua hàng.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Mã số đồng hồ và Phiếu bảo hành không trùng khớp nhau hoặc không xác định được vì bất kỳ lý do nào.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Sản phẩm bị hư hỏng do tác động cơ học làm rơi, vỡ, va đập, trầy xước, móp méo, ẩm ướt, hoen rỉ, chảy nước hoặc do hỏa hoạn, thiên tai gây nên.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span>Sản phẩm bị hư hỏng do sử dụng không đúng sách hướng dẫn.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp; </span>Sản phẩm để trong môi trường ẩm ướt, nhiệt độ cao, ngoài nắng, gần lửa, các nguồn nhiệt vượt quá nhiệt độ cho phép.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Sản phẩm bị ướt mưa, rơi vào nước, rơi xuống đất hoặc va chạm vào những vật cứng.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Khách hàng tự ý can thiệp vào máy của sản phẩm hoặc đem đến một nơi nào khác sửa chữa.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal"><span style="font-size: small;"><span style="font-family: Arial;">Lưu ý:</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Khách hàng chịu trách nhiệm cho chi phí vận chuyển đến Trung tâm bảo hành.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p class="MsoNormal" style="margin-left: 0.25in; text-indent: -0.25in;"><span style="font-size: small;"><span style="font-family: Arial;"><!--[if !supportLists]-->-<span style="font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><!--[endif]-->Hết thời hạn bảo hành, chi phí sửa chữa sẽ được trung tâm bảo hành hỗ trợ với giá ưu đãi nhất.</span></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-language:AR-SA"><o:p></o:p></span></p>
-                                <p></p>
-
+                            <div class="write-review">
+                                <a href="/frontend/#">Write a review</a>
+                            </div>
+                        </div>
+                        <div class="single-product-condition">
+                            <p>Reference: <span>demo_1</span></p>
+                            <p>Condition: <span>New product</span></p>
+                        </div>
+                        <div class="single-product-price">
+                            <h2>$16.51</h2>
+                        </div>
+                        <div class="single-product-desc">
+                            <p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                            <div class="product-in-stock">
+                                <p>300 Items<span>In stock</span></p>
+                            </div>
+                        </div>
+                        <div class="single-product-info">
+                            <a href="/frontend/#"><i class="fa fa-envelope"></i></a>
+                            <a href="/frontend/#"><i class="fa fa-print"></i></a>
+                            <a href="/frontend/#"><i class="fa fa-heart"></i></a>
+                        </div>
+                        <div class="single-product-quantity">
+                            <p class="small-title">Quantity</p>
+                            <div class="cart-quantity">
+                                <div class="cart-plus-minus-button single-qty-btn">
+                                    <input class="cart-plus-minus sing-pro-qty" type="text" name="qtybutton" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-product-size">
+                            <p class="small-title">Size </p>
+                            <select name="product-size" id="product-size">
+                                <option value="">S</option>
+                                <option value="">M</option>
+                                <option value="">L</option>
+                            </select>
+                        </div>
+                        <div class="single-product-color">
+                            <p class="small-title">Color </p>
+                            <a href="/frontend/#"><span></span></a>
+                            <a class="color-blue" href="/frontend/#"><span></span></a>
+                        </div>
+                        <div class="single-product-add-cart">
+                            <a class="add-cart-text" title="Add to cart" href="/frontend/#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGLE-PRODUCT-DESCRIPTION END -->
+            <!-- SINGLE-PRODUCT INFO TAB START -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="product-more-info-tab">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs more-info-tab">
+                            <li class="active"><a href="/frontend/#moreinfo" data-toggle="tab">more info</a></li>
+                            <li><a href="/frontend/#datasheet" data-toggle="tab">data sheet</a></li>
+                            <li><a href="/frontend/#review" data-toggle="tab">reviews</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="moreinfo">
+                                <div class="tab-description">
+                                    <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="datasheet">
+                                <div class="deta-sheet">
+                                    <table class="table-data-sheet">
+                                        <tbody>
+                                        <tr class="odd">
+                                            <td>Compositions</td>
+                                            <td>Cotton</td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td class="td-bg">Styles</td>
+                                            <td class="td-bg">Casual</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>Properties</td>
+                                            <td>Short Sleeve</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="review">
+                                <div class="row tab-review-row">
+                                    <div class="col-xs-5 col-sm-4 col-md-4 col-lg-3 padding-5">
+                                        <div class="tab-rating-box">
+                                            <span>Grade</span>
+                                            <div class="rating-box">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-empty"></i>
+                                            </div>
+                                            <div class="review-author-info">
+                                                <strong>write A REVIEW</strong>
+                                                <span>06/22/2015</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7 col-sm-8 col-md-8 col-lg-9 padding-5">
+                                        <div class="write-your-review">
+                                            <p><strong>write A REVIEW</strong></p>
+                                            <p>write A REVIEW</p>
+                                            <span class="usefull-comment">Was this comment useful to you? <span>Yes</span><span>No</span></span>
+                                            <a href="/frontend/#">Report abuse </a>
+                                        </div>
+                                    </div>
+                                    <a href="/frontend/#" class="write-review-btn">Write your review!</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- END -->
-
-        <section class="related-product mb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h5 class="title-related">SẢN PHẨM CÙNG LOẠI</h5>
-                        <hr>
+            <!-- SINGLE-PRODUCT INFO TAB END -->
+            <!-- RELATED-PRODUCTS-AREA START -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="left-title-area">
+                        <h2 class="left-title">related products</h2>
                     </div>
                 </div>
-
-                <div class="owl-carousel owl-theme">
-                    <div class="card mb-4  text-center">
-                        <img class="card-img-top" src="/frontend/img/watch/w1.jpg" alt="Card image cap">
-                        <div class="card-body ">
-                            <p class="mb-1">ĐỒNG HỒ Longines</p>
-                            <a href="/frontend/#" class="card-link price  product-price">6.900.000</a>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 related-product">
-                        <img class="card-img-top" src="/frontend/img/watch/w2.jpg" alt="Card image cap">
-                        <div class="card-body text-center">
-                            <p class="mb-1">ĐỒNG HỒ BREITING</p>
-                            <a href="/frontend/#" class="card-link price product-price">6.900.000</a>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 related-product">
-                        <img class="card-img-top" src="/frontend/img/watch/w3.jpg" alt="Card image cap">
-                        <div class="card-body text-center">
-                            <p class="mb-1">ĐỒNG HỒ MONBLANC</p>
-                            <a href="/frontend/#" class="card-link price  product-price">2.900.000</a>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 related-product">
-                        <img class="card-img-top" src="/frontend/img/watch/w4.jpg" alt="Card image cap">
-                        <div class="card-body text-center">
-                            <p class="mb-1">ĐỒNG HỒ OMEGA</p>
-                            <a href="/frontend/#" class="card-link price  product-price">9.900.000</a>
+                <div class="related-product-area featured-products-area">
+                    <div class="col-sm-12">
+                        <div class=" row">
+                            <!-- RELATED-CAROUSEL START -->
+                            <div class="related-product">
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/3.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Faded Short T-sh...</a>
+                                            <div class="price-box">
+                                                <span class="price">$16.51</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/1.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Blouse</a>
+                                            <div class="price-box">
+                                                <span class="price">$22.95</span>
+                                                <span class="old-price">$27.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/9.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Dress</a>
+                                            <div class="price-box">
+                                                <span class="price">$23.40</span>
+                                                <span class="old-price">$26.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/5.jpg" alt="product-image" /></a>
+                                            <div class="overlay-content">
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Dress</a>
+                                            <div class="price-box">
+                                                <span class="price">$50.99</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/12.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Summer Dr...</a>
+                                            <div class="price-box">
+                                                <span class="price">$28.98</span>
+                                                <span class="old-price">$30.51</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/13.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Summer</a>
+                                            <div class="price-box">
+                                                <span class="price">$30.50</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/7.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Chiffon Dr...</a>
+                                            <div class="price-box">
+                                                <span class="price">$16.40</span>
+                                                <span class="old-price">$20.50</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/11.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Dress</a>
+                                            <div class="price-box">
+                                                <span class="price">$26.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/10.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Dress</a>
+                                            <div class="price-box">
+                                                <span class="price">$26.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/2.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Blouse</a>
+                                            <div class="price-box">
+                                                <span class="price">$27.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/4.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Faded Short Sle...</a>
+                                            <div class="price-box">
+                                                <span class="price">$16.51</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/6.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Chiffon Dr...</a>
+                                            <div class="price-box">
+                                                <span class="price">$16.40</span>
+                                                <span class="old-price">$20.50</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                                <div class="item">
+                                    <div class="single-product-item">
+                                        <div class="product-image">
+                                            <a href="/frontend/#"><img src="/frontend/img/product/sale/8.jpg" alt="product-image" /></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="customar-comments-box">
+                                                <div class="rating-box">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-empty"></i>
+                                                </div>
+                                                <div class="review-box">
+                                                    <span>1 Review(s)</span>
+                                                </div>
+                                            </div>
+                                            <a href="/frontend/#">Printed Dress</a>
+                                            <div class="price-box">
+                                                <span class="price">$26.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+                            </div>
+                            <!-- RELATED-CAROUSEL END -->
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-
-    </main>
+            <!-- RELATED-PRODUCTS-AREA END -->
+        </div>
+        <!-- RIGHT SIDE BAR START -->
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <!-- SINGLE SIDE BAR START -->
+            <div class="single-product-right-sidebar">
+                <h2 class="left-title">Viewed products</h2>
+                <ul>
+                    <li>
+                        <a href="/frontend/#"><img src="/frontend/img/product/sidebar_product/2.jpg" alt="" /></a>
+                        <div class="r-sidebar-pro-content">
+                            <h5><a href="/frontend/#">Faded Short ...</a></h5>
+                            <p>Faded short sleeves t-shirt with high...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/frontend/#"><img src="/frontend/img/product/sidebar_product/4.jpg" alt="" /></a>
+                        <div class="r-sidebar-pro-content">
+                            <h5><a href="/frontend/#">Printed Chif ..</a></h5>
+                            <p>Printed chiffon knee length dress...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/frontend/#"><img src="/frontend/img/product/sidebar_product/6.jpg" alt="" /></a>
+                        <div class="r-sidebar-pro-content">
+                            <h5><a href="/frontend/#">Printed Sum ...</a></h5>
+                            <p>Long printed dress with thin...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/frontend/#"><img src="/frontend/img/product/sidebar_product/1.jpg" alt="" /></a>
+                        <div class="r-sidebar-pro-content">
+                            <h5><a href="/frontend/#">Printed Dress </a></h5>
+                            <p>100% cotton double printed dress....</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- SINGLE SIDE BAR END -->
+            <!-- SINGLE SIDE BAR START -->
+            <div class="single-product-right-sidebar clearfix">
+                <h2 class="left-title">Tags </h2>
+                <div class="category-tag">
+                    <a href="/frontend/#">fashion</a>
+                    <a href="/frontend/#">handbags</a>
+                    <a href="/frontend/#">women</a>
+                    <a href="/frontend/#">men</a>
+                    <a href="/frontend/#">kids</a>
+                    <a href="/frontend/#">New</a>
+                    <a href="/frontend/#">Accessories</a>
+                    <a href="/frontend/#">clothing</a>
+                    <a href="/frontend/#">New</a>
+                </div>
+            </div>
+            <!-- SINGLE SIDE BAR END -->
+            <!-- SINGLE SIDE BAR START -->
+            <div class="single-product-right-sidebar">
+                <div class="slider-right zoom-img">
+                    <a href="/frontend/#"><img class="img-responsive" src="/frontend/img/product/cms11.jpg" alt="sidebar left" /></a>
+                </div>
+            </div>
+        </div>
+        <!-- SINGLE SIDE BAR END -->
+    </div>
 @endsection
-

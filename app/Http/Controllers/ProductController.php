@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
 //        $data = Product::all();
-        $data = Product::latest()->paginate(20);    // Lấy dữ liệu phân trang
+        $data = Product::latest()->paginate(10);    // Lấy dữ liệu phân trang
         return view('backend.product.index', ['data'=> $data]);
     }
 

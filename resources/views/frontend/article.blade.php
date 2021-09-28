@@ -1,142 +1,80 @@
 @extends('frontend.layout.main')
 
 @section('main-content')
-    <main role="main">
-
-        <!-- Breadcrumb-->
-        <section class="breadcrumb h-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb my-0 py-0">
-                                <li class="breadcrumb-item"><a class="text-dark" href="frontend//">Trang chủ</a></li>
-                                <li class="breadcrumb-item"><a class="text-dark" href="frontend/#">Đồng hồ nam</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- BSTORE-BREADCRUMB START -->
+            <div class="bstore-breadcrumb">
+                <a href="index.html">HOMe</a>
+                <span><i class="fa fa-caret-right	"></i></span>
+                <span>About us</span>
             </div>
-        </section>
-        <!-- End Breadcrumb-->
-
-        <!-- Main Content-->
-        <section class="news mb-4 mt-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h5 class="title-related">TIN TỨC</h5>
-                        <hr>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n1.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n2.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n3.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n4.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n2.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n3.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n4.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="card mb-4">
-                            <img class="card-img-top" src="frontend/img/news/n1.jpg" alt="Card image cap">
-                            <div class="card-body ">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="delimited position-absolute w-100 h-50 border-right mt-5"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END -->
-
-        <div class="container mb-5">
-            <!-- Pagination -->
-            <nav aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="frontend/#" tabindex="-1">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="frontend/#">1</a></li>
-                    <li class="page-item active">
-                        <a class="page-link" href="frontend/#">2 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="frontend/#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="frontend/#">Next</a>
-                    </li>
-                </ul>
-            </nav>
+            <!-- BSTORE-BREADCRUMB END -->
         </div>
-
-
-    </main>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2 class="page-title about-page-title">About us</h2>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <!-- SINGLE-ABOUT-INFO START -->
+            <div class="single-about-info">
+                <div class="our-company">
+                    <h3>Our company</h3>
+                    <strong>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididun.</strong>
+                    <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>
+                    <div class="company-list-menu">
+                        <ul>
+                            <li>Top quality products</li>
+                            <li>Best customer service</li>
+                            <li>30-days money back guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGLE-ABOUT-INFO END -->
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="single-about-info">
+                <!-- OUR-TEAM START -->
+                <div class="our-team">
+                    <h3>Our team</h3>
+                    <strong>Lorem set sint occaecat cupidatat non </strong>
+                    <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                    <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                    <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                </div>
+                <!-- OUR-TEAM END -->
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="single-about-info">
+                <!-- OUR-TESTIMONIALS START -->
+                <div class="our-testimonials">
+                    <h3>Testimonials</h3>
+                    <!-- SINGLE-TESTIMONIALS START -->
+                    <div class="single-testimonials">
+                        <div class="testimonials-text">
+                            <span class="before"></span>
+                            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+                            <span class="after"></span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit</p>
+                    <!-- SINGLE-TESTIMONIALS END -->
+                    <!-- SINGLE-TESTIMONIALS START -->
+                    <div class="single-testimonials">
+                        <div class="testimonials-text">
+                            <span class="before"></span>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
+                            <span class="after"></span>
+                        </div>
+                    </div>
+                    <p>Ipsum dolor sit</p>
+                    <!-- SINGLE-TESTIMONIALS END -->
+                </div>
+                <!-- OUR-TESTIMONIALS END -->
+            </div>
+        </div>
+    </div>
 @endsection
